@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "canisters": {
+    "cafeteria_magnate_backend": {
+      "type": "motoko",
+      "main": "src/cafeteria_magnate_backend/main.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "output_env_file": ".env"
+}
