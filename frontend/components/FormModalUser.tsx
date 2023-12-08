@@ -43,9 +43,7 @@ function User () {
     const [apellidop,setapellidop] = useState('')
     const [apellidom,setapellidom] = useState('')
     const [telefono,settelefono] = useState('')
-    const [redesS,setredesS] = useState('')
-    const [email,setemail] = useState('')
-    const [tipo,settipo] = useState('')
+   
 
     const handleBuscarUsr = async () => {
         try {
@@ -66,10 +64,7 @@ function User () {
                 nombre,
                 apellidop,
                 apellidom,
-                telefono,
-                redesS,
-                email,
-                tipo)
+                telefono)
             console.log(result)
         }catch(error){
             console.error(error)
@@ -101,12 +96,6 @@ function User () {
         <br></br><input id="apellidom" className="modal-items" placeholder='Apellido Materno' value={apellidom} onChange={(e) => setapellidom(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce el teléfono</label>
         <br></br><input id="telefono" className="modal-items" placeholder='Teléfono' value={telefono} onChange={(e) => settelefono(e.target.value)}/>
-        <br></br><label id="modal-items-text">Introduce la red Social</label>
-        <br></br><input id="redesS" className="modal-items" placeholder='Redes Sociales' value={redesS} onChange={(e) => setredesS(e.target.value)}/>
-        <br></br><label id="modal-items-text">Introduce el correo</label>
-        <br></br><input id="email" className="modal-items" placeholder='Correo' value={email} onChange={(e) => setemail(e.target.value)}/>
-        <br></br><label id="modal-items-text">Introduce el tipo de usuario</label>
-        <br></br><input id="tipo" className="modal-items" placeholder='Tipo' value={tipo} onChange={(e) => settipo(e.target.value)}/>
         <br></br><br></br><button id='button' type="submit">Enviar</button>
     </form>
 

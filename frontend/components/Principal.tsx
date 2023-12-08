@@ -13,8 +13,9 @@ function Home() {
         <div className="content-center brand" style={{textAlign:'center'}}>
           <h1 className="h1-seo">Cafeteria Magnate 3.0</h1>
           <h3 className="d-none d-sm-block">
-            Una plataforma a tu alcance, fácil de manipular,
-            una gran variedad de productos en la Cafeteria.
+            Una plataforma que brinda a las personas un servicio de café así como 
+            servicio de comida y diferentes productos y por cada producto que adquiera 
+            dentro de esta cafetería.
           </h3>
         </div>
         

@@ -4,9 +4,14 @@
       "main": "canisters/counter/main.mo",
       "type": "motoko"
     },
+    "cafeteria_magnate_backend": {
+        "main": "canisters/cafeteria_magnate_backend/main.mo",
+        "type": "motoko"
+      },
     "assets": {
       "dependencies": [
-        "counter"
+        "counter",
+        "cafeteria_magnate_backend"
       ],
       "frontend": {
         "entrypoint": "dist/index.html"

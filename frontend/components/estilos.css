@@ -4,45 +4,36 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 228, 196, 0.9); /* Beige claro */
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  }
+}
 
-  .modal-content {
-    background: rgba(0, 0, 0, 0.75);
-    /*padding: 20px;*/
-    
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-height: 100vh; /* Establece la altura máxima del modal */
-    overflow-y: auto;/* Añade una barra de desplazamiento vertical si es necesario */
-    /*min-height: 170vh;  o el valor que consideres adecuado */
-    
-  }
+.modal-content {
+  background: rgba(255, 248, 220, 0.9); /* Amarillo claro */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 248, 220, 0.5); /* Amarillo claro */
+  max-height: 100vh;
+  overflow-y: auto;
+}
 
-  .modal-content.many-records {
-    max-width: 100%; /* Ajusta la altura máxima para muchos registros */
-    
-  }
+.modal-content.many-records {
+  max-width: 100%;
+}
 
-  .user-records-container {
-    display: flex;
+.user-records-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-right: -10px; /* Alinea los registros a la izquierda */
-    
-  }
+  margin-right: -10px;
+}
 
-  .user-record{
-    margin-right: 20px;
-    margin-bottom: 10px;
-    
-  }
+.user-record {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
 
-  /* Agrega este estilo si usas flexbox */
 .user-record:last-child {
   margin-right: 0;
 }
@@ -62,21 +53,20 @@
 #modal-items-text {
   top: 0;
   left: 0;
-  color: aliceblue;
+  color: #8B4513; /* Marrón oscuro */
 }
 
 .modal-items-button {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 50px;
   height: 50px;
   background-color: transparent;
-  color:aliceblue;
+  color: #8B4513; /* Marrón oscuro */
   font-size: 30px;
   border: 0;
 }
-
 
 .button {
   border-radius: 5px;
@@ -86,12 +76,10 @@
 }
 
 #button {
-
   border-radius: 5px;
   width: auto;
   height: auto;
   font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.95);
-  color:aliceblue;
-
+  background-color: rgba(255, 228, 196, 0.95); /* Beige claro */
+  color: #8B4513; /* Marrón oscuro */
 }

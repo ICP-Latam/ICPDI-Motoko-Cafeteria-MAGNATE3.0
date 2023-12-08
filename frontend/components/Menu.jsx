@@ -29,7 +29,7 @@ function Menu () {
         </div>
         <div style={{top:"-100px"}}>
         <UncontrolledTooltip id='spam' placement="bottom" target="navbar-brand">
-          <p style={{color:'black', top: '10px',left: '20px'}}>Lo mejor en Cafes</p>
+          <p style={{color:'black', top: '10px',left: '20px'}}>Lo mejor en Cafés</p>
           
         </UncontrolledTooltip>
         </div>

@@ -1,34 +1,40 @@
-import { FaBars } from 'react-icons/fa';
+import { FaCoffee } from 'react-icons/fa'; /* Cambiado a un ícono de taza de café */
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background: #000;
+  background: #8B4513; /* Marrón oscuro */
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
+  color: #fff; /* Cambiado el color del texto a blanco */
 
-  /* Third Nav */
-  /* justify-content: flex-start; */
+  h1 {
+    font-family: 'Times New Roman', sans-serif; /* Cambiado a tipo de letra Times New Roman */
+    color: #fff;
+  }
 `;
 
 export const NavLink = styled(Link)`
   color: #fff;
+  font-family: 'Cursive', sans-serif; /* Cambiado a tipo de letra cursiva */
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
 
   &.active {
-    color: #15cdfc;
+    color: #8B4513; /* Marrón oscuro */
   }
 `;
 
-export const Bars = styled(FaBars)`
+export const Bars = styled(FaCoffee)` /* Cambiado a un ícono de taza de café */
   display: none;
   color: #fff;
 
@@ -48,13 +54,6 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
 
-  /* Second Nav */
-  /* margin-right: 24px; */
-
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -65,10 +64,6 @@ export const NavBtn = styled.nav`
   align-items: center;
   margin-right: 24px;
 
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -76,21 +71,21 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #256ce1;
-  padding: 10px 22px;
+  background: #D2691E; /* Marrón claro */
+  padding: 15px 22px;
+  font-size: 18px;
   color: #fff;
+  font-style: normal; /* Cambiado a estilo de letra normal */
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-
-  /* Second Nav */
   margin-left: 24px;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #8B4513; /* Marrón oscuro */
+    color: #fff;
   }
 `;
