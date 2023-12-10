@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
-import cafeteriaImage from "./images/cafeteria.jpg"; // Ajusta la ruta según la ubicación real de la imagen
+import cafeteriaImage from "./imagenes/CAFETERIA.png"; // Ajusta la ruta según la ubicación real de la imagen
 
 function Home() {
   return (
