@@ -1,23 +1,25 @@
 import React from "react";
 import { Container } from "reactstrap";
 import cafeteriaImage from "./imagenes/CAFETERIA.png"; // Ajusta la ruta según la ubicación real de la imagen
+import otraImagen from "./imagenes/fondo.png"; // Ruta de la nueva imagen
 
 function Home() {
   return (
-    <div className="page-header header-filter">
+    <div className="page-header header-filter" style={{ backgroundImage: `url(${otraImagen})`, backgroundSize: "cover", backgroundPosition: "center", color: "#000000" }}>
       <Container>
         <div className="content-center brand" style={{ textAlign: "center" }}>
-          <h1 className="h1-seo">Cafeteria Magnate 3.0</h1>
-          <h3 className="d-none d-sm-block">
-            Una plataforma que brinda a las personas un servicio de café así como servicio de comida y diferentes productos y por cada producto que adquiera dentro de esta cafetería.
-          </h3>
-
-          {/* Agregar la imagen */}
+          <h1 className="h1-seo">Cafetería Magnate 3.0</h1>
+          <p className="lead" style={{ color: "#ffffff" }}>
+            Bienvenido a nuestra cafetería, donde cada sorbo cuenta.
+          </p>
           <img
             src={cafeteriaImage}
-            alt="Cafeteria"
-            style={{ maxWidth: "100%", marginTop: "20px" }}
+            alt="Cafetería"
+            style={{ maxWidth: "80%", marginTop: "20px", borderRadius: "8px" }}
           />
+          <p className="lead" style={{ color: "#ffffff" }}>
+            Descubre una experiencia única de café y deliciosos productos.
+          </p>
         </div>
       </Container>
     </div>
