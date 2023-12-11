@@ -47,7 +47,7 @@ function User () {
 
     const handleBuscarUsr = async () => {
         try {
-            const result = await cafeteria_magnate_backend.buscarUsuario();
+            const result = await cafeteria_magnate_backend.buscarUsuarios();
             setUsuarios(result.sort((a, b) => parseInt(a[0]) - parseInt(b[0])));  // Ordenar posts por ID
 
             
@@ -60,7 +60,7 @@ function User () {
     const handleSubmitUsr = async (e) =>{
         e.preventDefault();
         try{
-            const result = await cafeteria_magnate_backend.crearUsuarios(
+            const result = await cafeteria_magnate_backend.crearUsuario(
                 nombre,
                 apellidop,
                 apellidom,
