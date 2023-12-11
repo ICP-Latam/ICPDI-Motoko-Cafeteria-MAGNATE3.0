@@ -74,12 +74,7 @@ function CafeteriaItemProd (props) {
         <button  id='button'onClick={handleUpdateProd}>Actualizar</button>
                 <button id='button' onClick={handleDeleteProd}>Borrar</button>
         </div>
-        </div>
-
-        
-        
-
-        
+        </div> 
     </div>
   )
 }

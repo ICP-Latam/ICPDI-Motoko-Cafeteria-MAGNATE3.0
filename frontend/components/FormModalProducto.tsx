@@ -116,7 +116,7 @@ function Productos () {
                <div className="user-records-container">
     {Productos.map((productos) => (
 <div key={productos[0]} className="user-record">
-  <CafeteriaItemProd Evento={productos} refresh={handleBuscarProd} />
+  <CafeteriaItemProd Producto={productos} refresh={handleBuscarProd} />
   </div>
 ))}
 </div>
@@ -125,6 +125,4 @@ function Productos () {
     
   );
 }
-
-
 export default Productos;

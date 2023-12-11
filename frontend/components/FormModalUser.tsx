@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import { useCanister } from '@connect2ic/react';
-import FestividadItemUsr from "./CafeteriaItemUsr";
+import CafeteriaItemUsr from "./CafeteriaItemUsr";
 import './estilos.css';
 
 function User () {
@@ -35,7 +35,7 @@ function User () {
     setModalIsOpen2(false);
   };
 
-    const [Festividad_backend] = useCanister("Festividad_backend");
+    const [cafeteria_magnate_backend] = useCanister("cafeteria_magnate_backend");
 
     const [usuarios, setUsuarios] = useState([]);
 
@@ -47,7 +47,7 @@ function User () {
 
     const handleBuscarUsr = async () => {
         try {
-            const result = await Festividad_backend.buscarUsuarios();
+            const result = await cafeteria_magnate_backend.buscarUsuarios();
             setUsuarios(result.sort((a, b) => parseInt(a[0]) - parseInt(b[0])));  // Ordenar posts por ID
 
             
@@ -60,7 +60,7 @@ function User () {
     const handleSubmitUsr = async (e) =>{
         e.preventDefault();
         try{
-            const result = await Festividad_backend.crearUsuario(
+            const result = await cafeteria_magnate_backend.crearUsuario(
                 nombre,
                 apellidop,
                 apellidom,
@@ -97,9 +97,7 @@ function User () {
         <br></br><label id="modal-items-text">Introduce el teléfono</label>
         <br></br><input id="telefono" className="modal-items" placeholder='Teléfono' value={telefono} onChange={(e) => settelefono(e.target.value)}/>
         <br></br><br></br><button id='button' type="submit">Enviar</button>
-    </form>
-
-    
+    </form> 
 
     </Modal>
 
@@ -112,7 +110,7 @@ function User () {
           <div className="user-records-container">
           {usuarios.map((usuario) => (
       <div key={usuario[0]} className="user-record">
-        <FestividadItemUsr usuario={usuario} refresh={handleBuscarUsr} />
+        <CafeteriaItemUsr usuario={usuario} refresh={handleBuscarUsr} />
         </div>
     ))}
   </div>
@@ -121,6 +119,4 @@ function User () {
     </div>
   );
 }
-
-
 export default User;
