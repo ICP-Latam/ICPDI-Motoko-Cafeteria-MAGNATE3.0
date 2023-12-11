@@ -39,14 +39,14 @@ function Productos () {
 
     const [nombrep,setnombrep] = useState('')
     const [descripcion,setdescripcion] = useState('')
-    const [existencias,setexistencias] = useState('')
+    const [existencia,setexistencia] = useState('')
     const [caducidad,setcaducidad] = useState('')
     const [marca,setmarca] = useState('')
     const [precio,setprecio] = useState('')
 
     const handleBuscarProd = async () => {
         try {
-            const result = await cafeteria_magnate_backend.buscarProductos();
+            const result = await cafeteria_magnate_backend.buscarProducto();
             setProductos(result.sort((a, b) => parseInt(a[0]) - parseInt(b[0])));  // Ordenar posts por ID
 
         } catch(e) {
@@ -60,7 +60,7 @@ function Productos () {
             const result = await cafeteria_magnate_backend.crearProducto(
                 nombrep,
                 descripcion,
-                existencias,
+                existencia,
                 caducidad,
                 marca,
                 precio)
@@ -96,7 +96,7 @@ function Productos () {
         <br></br><label id="modal-items-text">Introduce la descripcion</label>
         <br></br><input id="descripcion"  className="modal-items"placeholder='Descripcion' value={descripcion} onChange={(e) => setdescripcion(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce las existencias</label>
-        <br></br><input id="existencias"  className="modal-items"placeholder='Existencias' value={existencias} onChange={(e) => setexistencias(e.target.value)}/>
+        <br></br><input id="existencias"  className="modal-items"placeholder='Existencias' value={existencia} onChange={(e) => setexistencia(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce la fecha de caducidad</label>
         <br></br><input id="caducidad" className="modal-items" placeholder='Caducidad' value={caducidad} onChange={(e) => setcaducidad(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce la marca</label>

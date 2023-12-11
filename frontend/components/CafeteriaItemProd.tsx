@@ -10,7 +10,7 @@ function CafeteriaItemProd (props) {
 
     const [nombrep,setnombrep] = useState(Producto[1].nombrep)
     const [descripcion,setdescripcion] = useState(Producto[1].descripcion)
-    const [existencias,setexistencias] = useState(Producto[1].existencias)
+    const [existencia,setexistencia] = useState(Producto[1].existencia)
     const [caducidad,setcaducidad] = useState(Producto[1].caducidad)
     const [marca,setmarca] = useState(Producto[1].marca)
     const [precio,setprecio] = useState(Producto[1].precio)
@@ -28,7 +28,7 @@ function CafeteriaItemProd (props) {
                 Producto[0],
                 nombrep,
                 descripcion,
-                existencias,
+                existencia,
                 caducidad,
                 marca,
                 precio);
@@ -61,7 +61,7 @@ function CafeteriaItemProd (props) {
         <br></br><label id="modal-items-text">Introduce la descripcion</label>
         <br></br><input id="descripcion" className="modal-items2" placeholder='Descripcion' value={descripcion} onChange={(e) => setdescripcion(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce la existencia</label>
-        <br></br><input id="precio" className="modal-items2" placeholder='Existencia' value={existencias} onChange={(e) => setexistencias(e.target.value)}/>
+        <br></br><input id="precio" className="modal-items2" placeholder='Existencia' value={existencia} onChange={(e) => setexistencia(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce la fecha de caducidad</label>
         <br></br><input id="reservacion" className="modal-items2" placeholder='Caducidad' value={caducidad} onChange={(e) => setcaducidad(e.target.value)}/>
         <br></br><label id="modal-items-text">Introduce la marca</label>
