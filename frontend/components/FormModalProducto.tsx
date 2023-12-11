@@ -114,9 +114,9 @@ function Productos () {
         className={`custom-modal modal-content ${modalContentClass}`}>
         <button className="modal-items-button" onClick={closeModal4}>X</button>
                <div className="user-records-container">
-    {Productos.map((productos) => (
-<div key={productos[0]} className="user-record">
-  <CafeteriaItemProd Producto={productos} refresh={handleBuscarProd} />
+    {Productos.map((Producto) => (
+<div key={Producto[0]} className="user-record">
+  <CafeteriaItemProd Producto={Producto} refresh={handleBuscarProd} />
   </div>
 ))}
 </div>

@@ -1,8 +1,6 @@
 import { useCanister } from "@connect2ic/react";
 import React, { useState } from "react";
 
-
-
 function CafeteriaItemProd (props) {
     const { Producto , refresh} = props;
 
